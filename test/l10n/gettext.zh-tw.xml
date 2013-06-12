@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- vim: sw=2 sta et
+-->
+
+<!DOCTYPE refentry
+  PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+         "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+
+     
+<refentry lang="zh-tw">
+
+  <remark>
+     I copied this translation from the gettext --help option.
+     I know it's not very good, don't blame me :)
+     But there are even more worse problems than this:
+     in particular, both groff and makeinfo mangle the 
+     Chinese characters here!
+  </remark>
+
+  <refmeta>
+    <refentrytitle><command>gettext</command></refentrytitle>
+    <manvolnum>1</manvolnum>
+    <refmiscinfo>GNU gettext</refmiscinfo>
+  </refmeta>
+
+  <refnamediv>
+    <refname><command>gettext</command></refname>
+  </refnamediv>
+  
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>sgml2xml</command>
+      <arg choice="opt" rep="norepeat"><replaceable>選項</replaceable></arg>
+      <group choice="opt" rep="norepeat">
+        <arg choice="opt" rep="norepeat">
+          <arg choice="opt" rep="norepeat"><replaceable>text-domain</replaceable></arg>
+          <arg choice="plain" rep="norepeat"><replaceable>msg-id</replaceable></arg>
+        </arg>
+        <arg>
+          <arg choice="plain" rep="norepeat"><option>-s</option></arg>
+          <arg choice="opt" rep="norepeat"><replaceable>msg-id</replaceable></arg>
+        </arg>
+      </group>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  
+  <refsect1>
+    <title>詳釋</title>
+  </refsect1>
+  
+  <refsect1>
+    <title>選項</title>
+    
+    <variablelist>
+      <varlistentry>
+        <term><option>-d <replaceable>text-domain</replaceable></option></term>
+        <term><option>--domain=<replaceable>text-domain</replaceable></option></term>
+        <listitem>
+          <para>
+            由 TEXTDOMAIN 這個文字領域讀取翻譯後的訊息。
+          </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-e</option></term>
+        <listitem>
+          <para>
+            允許某些溢位字元被展開。
+          </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-E</option></term>
+        <listitem>
+          <para>
+            為了相容性存在的選項，不會造成任何影響。
+          </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-h</option></term>
+        <term><option>--help</option></term>
+        <listitem>
+          <para>
+            顯示這段說明訊息。
+          </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-n</option></term>
+        <listitem>
+          <para>抑制末端的新行字元。</para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-v</option></term>
+        <term><option>--version</option></term>
+        <listitem>
+          <para>
+            顯示關於版本的資訊。
+          </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option><replaceable>text-domain</replaceable>
+                      <replaceable>msg-id</replaceable></option></term>
+        <listitem>
+          <para>
+            由 <replaceable>text-domain</replaceable> 這個文字領域，
+            依據 <replaceable>msg-id</replaceable> 讀取翻譯後的訊息。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>
+      假如沒有給定 <replaceable>text-domain</replaceable> 這個參數的話，程式會依照名為 <replaceable>text-domain</replaceable> 的環境變數
+      來設定文字領域。假如訊息資料檔不在正常的目錄底下，使用者可以用環境變數
+       <envar>TEXTDOMAINDIR</envar> 指定訊息資料檔的所在的位置。
+    </para>
+
+    <para>
+      另外，當你使用選項 <option>-s</option> 的時候，這個程式的行為其實和 <command>echo</command> 指令是相似的。但
+      它不是直接把參數拷貝到標準輸出，而是把由訊息資料檔裡找到的翻譯過的訊息拷
+      到標準輸出。
+    </para>
+
+  </refsect1>
+</refentry>

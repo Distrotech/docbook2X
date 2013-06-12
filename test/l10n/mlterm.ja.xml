@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- vim: sw=2 sta et
+-->
+
+<!DOCTYPE refentry
+  PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+         "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+
+<!-- This is a short blurb from README.ja
+     of the mlterm package. -->
+
+<refentry lang="ja">
+
+  <refmeta>
+    <refentrytitle>mlterm</refentrytitle>
+    <manvolnum>1</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>mlterm</refname>
+  </refnamediv>
+  
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>mlterm</command>
+      <arg choice="opt" rep="repeat"><replaceable>オプション</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  
+  <refsect1>
+    <title>説明</title>
+
+    <para>
+      mltermとはMulti Lingual TERMinal の略です。
+    </para>
+
+    <refsect2>
+      <title>主な機能</title>
+
+      <variablelist>
+        <varlistentry>
+          <term>アンチエイリアス</term>
+          <listitem>
+            <para>
+              フォントのアンチエイリアス表示をサポートしています。
+              これには、X の Xrender extension 
+              に対応した Xft を利用しています。
+            </para>
+
+            <para>
+              アンチエイリアスフォントと、
+              通常の X フォントのどちらを使うかは動的に切替え可能です。
+            </para>
+            
+            <para>
+              KDE(Qt) と同じ設定でアンチエイリアスを使用できるようになりますので、Xft の設定の詳細については、KDE ユーザ会の web ページなどを参照して下さい。
+            </para>
+
+            <para>
+              また、KDE(Qt) で発生する不具合は、mlterm でもほぼ同様に再現します。問題が発生した場合は、KDE と同じように対処してください。
+            </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>壁紙、背景透過</term>
+          <listitem>
+            <para>
+              imlib がインストールされている環境で、imlib を組み込んでビルドした mlterm には、壁紙をはり付けることができます。背景透過も可能です。imlib がリンクされていれば、透過した背景の輝度を調節することもできます。
+            </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>マルチXIM</term>
+          <listitem>
+            <para>
+              複数のXIMを動的に切替えて使用することができます。
+              たとえば、端末側がUTF8エンコーディングで、kinput2とAmiを切替えながら、日本語ハングル混在の文章を入力できます。
+            </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>プロポーショナルフォント</term>
+          <listitem>
+            <para>
+              プロポーショナルフォントも使用できます。
+              この場合、-V オプションで、コラム幅を可変にするか、
+              固定にするかを指定することができます。
+              プロポーショナルフォントをコラム幅固定で使用する場合、
+              一文字ずつ描画して無理矢理隙間を埋めますので、
+              描画パフォーマンスが低下します。
+            </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>mlterm configuration protocol</term>
+          <listitem>
+            <para>
+              設定変更のための専用シーケンスを定義しています
+              (see doc/en/PROTOCOL)それを使うことによっても、
+              設定の動的変更が可能です。
+            </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>mlterm server</term>
+          <listitem>
+            <para>
+              mlterm は daemon process として動作することができます。
+              その場合、X なしでの起動や、複数のディスプレイ接続が可能です。
+              mlterm server が起動していれば、
+              mlclient をフロントエンドとして使用することで、
+              端末ウィンドウを開けます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </refsect2>
+  </refsect1>
+
+  <refsect1>
+    <title>著者</title>
+<address
+><surname>荒木</surname> <firstname>賢</firstname> (<surname>Araki</surname> <firstname>Ken</firstname>)
+<email>arakiken@users.sourceforge.net</email>
+</address>
+  </refsect1>
+    
+</refentry>

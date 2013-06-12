@@ -1,0 +1,7 @@
+*.texi
+*.info
+*.mxml
+*.txml
+*.xml
+*.[1-8]
+*.log

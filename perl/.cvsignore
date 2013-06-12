@@ -1,0 +1,9 @@
+Makefile.in
+Makefile
+config.pl
+db2x_xsltproc
+sgml2xml-isoent
+db2x_manxml
+db2x_texixml
+docbook2man
+docbook2texi

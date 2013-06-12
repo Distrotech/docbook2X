@@ -1,0 +1,8 @@
+.deps
+Makefile
+Makefile.in
+config.h
+config.h.in
+stamp-h
+stamp-h.in
+utf8trans

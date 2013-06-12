@@ -1,0 +1,12 @@
+Makefile.in
+Makefile
+.*.valid
+*.html
+*.mxml
+*.1
+*.7
+*.txml
+*.texi
+*.info
+*.dvi
+install.txt
