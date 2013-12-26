@@ -10,7 +10,7 @@
                 xml:lang="en">
 
 <!-- ********************************************************************
-     $Id: inline.xsl,v 1.35 2007/09/08 18:05:09 stevecheng Exp $
+     $Id: inline.xsl,v 1.34 2007/02/25 21:18:38 stevecheng Exp $
      ********************************************************************
 
      (C) 2000-2004 Steve Cheng <stevecheng@users.sourceforge.net>
@@ -276,10 +276,6 @@ These are the templates for character inline-level markup.
 </xsl:template>
 
 <xsl:template match="application">
-  <xsl:call-template name="inline-plain"/>
-</xsl:template>
-
-<xsl:template match="package">
   <xsl:call-template name="inline-plain"/>
 </xsl:template>
 

@@ -72,7 +72,7 @@ sub options_version
     print "db2x_texixml (part of docbook2X " . 
             $db2x_config{'docbook2X-version'} . ")\n";
     print <<'end';
-$Revision: 1.50 $ $Date: 2007/09/08 18:13:40 $
+$Revision: 1.49 $ $Date: 2006/04/20 03:02:31 $
 <URL:http://docbook2x.sourceforge.net/>
 
 Copyright (C) 2000-2004 Steve Cheng
@@ -432,11 +432,9 @@ sub texi_openfile {
                 $openstr = '>-';
             }
         } else {
-            if(not $self->{options}->{'to-stdout'}) {
-                $openstr .= '> ' . shell_quote($filename);
-                print "$filename\n"
-                    if $self->{options}->{'list-files'};
-            }
+            $openstr .= '> ' . shell_quote($filename);
+            print "$filename\n"
+                if $self->{options}->{'list-files'};
         }
     }
 

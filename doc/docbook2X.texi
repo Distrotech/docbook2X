@@ -1,0 +1,1 @@
+@setfilename docbook2X.info

@@ -3,6 +3,13 @@
 # This Makefile builds utf8trans.
 #
 
+HOSTCC = /usr/bin/gcc
+
+CC = $(HOSTCC)
+LD = $(CC)
+
+LDFLAGS = $(HOSTCC_LDFLAGS)
+
 bin_PROGRAMS = utf8trans
 
 utf8trans_SOURCES = utf8trans.c mtable.c mtable.h strings_buffer.c strings_buffer.h

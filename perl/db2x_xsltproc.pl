@@ -71,7 +71,7 @@ sub options_version
     print "db2x_xsltproc (part of docbook2X " . 
         $db2x_config{'docbook2X-version'} . ")\n";
     print <<'end';
-$Revision: 1.6 $ $Date: 2007/09/11 01:38:24 $
+$Revision: 1.5 $ $Date: 2004/08/18 14:21:52 $
 <URL:http://docbook2x.sourceforge.net/>
 
 Copyright (C) 2004 Steve Cheng
@@ -110,10 +110,10 @@ sub check_options
     
     if($options->{'stylesheet'} eq 'texi') {
         $options->{'stylesheet'} = 
-            "http://docbook2x.sourceforge.net/latest/xslt/texi/docbook.xsl";
+            "http://docbook2x.sf.net/latest/xslt/texi/docbook.xsl";
     } elsif($options->{'stylesheet'} eq 'man') {
         $options->{'stylesheet'} = 
-            "http://docbook2x.sourceforge.net/latest/xslt/man/docbook.xsl";
+            "http://docbook2x.sf.net/latest/xslt/man/docbook.xsl";
     }
 
     if(scalar(@argv) != 1) {

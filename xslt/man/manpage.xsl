@@ -10,7 +10,7 @@
                 xml:lang="en">
 
 <!-- ********************************************************************
-     $Id: manpage.xsl,v 1.7 2007/09/11 01:36:55 stevecheng Exp $
+     $Id: manpage.xsl,v 1.6 2006/04/20 13:45:55 stevecheng Exp $
      ********************************************************************
 
      (C) 2000-2004 Steve Cheng <stevecheng@users.sourceforge.net>
@@ -30,7 +30,7 @@
 
 <xsl:template name="manpage-filename">
   <xsl:param name="filename" />
-  <xsl:value-of select="translate(normalize-space($filename), ' /', '__')" />
+  <xsl:value-of select="normalize-space(translate($filename, &quot; /&quot;, &quot;__&quot;))" />
 </xsl:template>
 
 

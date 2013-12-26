@@ -11,7 +11,7 @@
                 xml:lang="en">
 
 <!-- ********************************************************************
-     $Id: refentry.xsl,v 1.20 2007/09/11 01:36:55 stevecheng Exp $
+     $Id: refentry.xsl,v 1.19 2006/04/21 02:39:55 stevecheng Exp $
      ********************************************************************
 
      (C) 2000-2004 Steve Cheng <stevecheng@users.sourceforge.net>
@@ -38,11 +38,7 @@
 <xsl:template name="refentry-filename">
   <xsl:param name="title" />
 
-  <xsl:variable name="title2">
-    <xsl:call-template name="manpage-filename">
-      <xsl:with-param name="filename" select="$title" />
-    </xsl:call-template>
-  </xsl:variable>
+  <xsl:variable name="title2" select="translate($title, &quot; /&quot;, &quot;__&quot;)" />
 
   <!-- not using gentext here since man page names tend not to have
        accented chars / non-Latin chars ...

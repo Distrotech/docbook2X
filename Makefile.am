@@ -1,4 +1,4 @@
-SUBDIRS = . charmaps dtd perl utf8trans xslt doc test
+SUBDIRS = . charmaps dtd perl utf8trans xslt test
 
 pkgrootdir = $(pkgdatadir)
 pkgroot_DATA = VERSION
